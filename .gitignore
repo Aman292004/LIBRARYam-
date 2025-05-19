@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Firebase config logs
+firebase-debug.log
+.firebaserc
+.firebase/
+
+# Build outputs (React or frontend bundlers)
+build/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+
+/public/logo5.png
+/public/logo9.png
+/public/logo10.png
+src/assets/banner.png
+src/assets/news/news-1.png
+src/assets/news/news-2.png
+src/assets/news/news-3.png
+src/assets/news/news-4.png
