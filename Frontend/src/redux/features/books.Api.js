@@ -19,7 +19,7 @@ const booksApi = createApi({
   tagTypes: ["Books"],
   endpoints: (builder) => ({
     fetchAllBooks: builder.query({
-      query: () => "https://libraryam.onrender.com/api/books/get-books",
+      query: () => "/api/books/get-books",
       providesTags: ["Books"],
     }),
     fetchBookById: builder.query({
