@@ -7,8 +7,11 @@ import bookRoutes from "./routes/book.route.js";
 import orderRoutes from "./routes/order.route.js";
 import authRoutes from "./routes/user.route.js";
 import adminRoutes from "./stats/admin.stats.js";
+import path from "path";
 
 dotenv.config();
+
+const __dirname = path.resolve();
 
 const app = express();
 
@@ -25,6 +28,12 @@ app.use("/api/books", bookRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
+
+app.use(express.static(path.join(__dirname, "/Frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "Frontend", "dist", "index.html"));
+});
 
 // Root route
 app.get("/", (req, res) => {
